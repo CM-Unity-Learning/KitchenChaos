@@ -5,12 +5,19 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public event EventHandler<OnSelectedChangedEventArgs> OnSelectedCounterChanged;
+    public class OnSelectedChangedEventArgs : EventArgs
+    {
+        public ClearCounter selectedCounter;
+    }
+
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private GameInputFactor gameInput;
     [SerializeField] private LayerMask counterLayerMask;
 
     private bool isWalking;
     private Vector3 lastInteractDir;
+    private ClearCounter selectedCounter;
 
     private void Start()
     {
@@ -19,7 +26,11 @@ public class Player : MonoBehaviour
 
     private void GameInput_OnInteractAction(object sender, EventArgs e)
     {
-        Vector2 inputVector = gameInput.GetMovementVectorNormalized();
+        if (selectedCounter != null)
+        {
+            selectedCounter.Interact();
+        }
+        /*Vector2 inputVector = gameInput.GetMovementVectorNormalized();
 
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
 
@@ -36,7 +47,7 @@ public class Player : MonoBehaviour
                 // Has ClearCounter
                 clearCounter.Interact();
             }
-        }
+        }*/
     }
 
     private void Update()
@@ -68,8 +79,21 @@ public class Player : MonoBehaviour
             {
                 // Has ClearCounter
                 //clearCounter.Interact();
+                if (clearCounter != selectedCounter)
+                {
+                    selectedCounter = clearCounter;
+                }
             }
-        } 
+            else
+            {
+                selectedCounter = null;
+            }
+        } else
+        {
+            selectedCounter = null;
+        }
+
+        Debug.Log(selectedCounter);
     }
 
     private void HandleMovement() 
