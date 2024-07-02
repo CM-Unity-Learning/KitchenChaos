@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClearCounter : BaseContainer, IKitchenObjectParent
+public class ContainerCounter : BaseContainer, IKitchenObjectParent
 {
     [SerializeField] private KitchenObjectSO kitchenObjectSO;
     [SerializeField] private Transform counterTopPoint;
@@ -20,7 +20,7 @@ public class ClearCounter : BaseContainer, IKitchenObjectParent
         {
             // Give the object to the player
             kitchenObject.SetKitchenObjectParent(player);
-            
+
         }
     }
 
