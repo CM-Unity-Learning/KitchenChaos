@@ -188,9 +188,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a456651264123b498c692cbeca2bb52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clearCounter: {fileID: 2265053733933510474}
+  visualGameObject: {fileID: 6924782866184476049}
 --- !u!4 &3055637772678410869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4589716710238282923, guid: 0004cb1e11ad014419b943c7da960724,
+    type: 3}
+  m_PrefabInstance: {fileID: 1573512579650574046}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6924782866184476049 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8489276541531669327, guid: 0004cb1e11ad014419b943c7da960724,
     type: 3}
   m_PrefabInstance: {fileID: 1573512579650574046}
   m_PrefabAsset: {fileID: 0}
