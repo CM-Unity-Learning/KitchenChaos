@@ -122,6 +122,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &78551656 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2265053733933510474, guid: 69adab347653ab94581ba352683a2f27,
+    type: 3}
+  m_PrefabInstance: {fileID: 1537960644}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2688c571016f5af4f9c6348878ccd11e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,10 +1077,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2265053733933510474, guid: 69adab347653ab94581ba352683a2f27,
         type: 3}
+      propertyPath: testing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265053733933510474, guid: 69adab347653ab94581ba352683a2f27,
+        type: 3}
       propertyPath: kitchenObjectSO
       value: 
       objectReference: {fileID: 11400000, guid: 2f02814a210e71342ab6738d67dc0fb1,
         type: 2}
+    - target: {fileID: 2265053733933510474, guid: 69adab347653ab94581ba352683a2f27,
+        type: 3}
+      propertyPath: secondClearCounter
+      value: 
+      objectReference: {fileID: 78551656}
     - target: {fileID: 3516612481797734277, guid: 69adab347653ab94581ba352683a2f27,
         type: 3}
       propertyPath: m_Name
