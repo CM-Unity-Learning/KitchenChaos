@@ -10,6 +10,11 @@ public class BaseContainer : MonoBehaviour, IKitchenObjectParent
     {
         Debug.Log("BaseContainer.Interact();");
     }
+    
+    public virtual void InteractAlternate(Player player)
+    {
+        Debug.Log("BaseContainer.InteractAlternate();");
+    }
 
     public Transform GetKitchenObjectFollowTransform()
     {
