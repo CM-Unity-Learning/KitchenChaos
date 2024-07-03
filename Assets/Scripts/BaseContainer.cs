@@ -21,7 +21,9 @@ public class BaseContainer : MonoBehaviour, IKitchenObjectParent
         this.kitchenObject = kitchenObject;
     }
 
-    public KitchenObject GetKitchenObject() { return kitchenObject; }
+    public KitchenObject GetKitchenObject() { 
+        return kitchenObject; 
+    }
 
     public void ClearKitchenObject()
     {
