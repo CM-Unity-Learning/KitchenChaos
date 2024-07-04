@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CuttingCounter : BaseContainer
 {
+    [SerializeField] private KitchenObjectSO cutKitchenObjectSO;
+
     public override void Interact(Player player)
     {
         if (!HasKitchenObject())
@@ -36,6 +38,12 @@ public class CuttingCounter : BaseContainer
 
     public override void InteractAlternate(Player player)
     {
-        
+        if (!HasKitchenObject())
+        {
+            // There is a KitchenObject here
+            GetKitchenObject().DestroySelf();
+
+            KitchenObject.SpawnKitchenObject(cutKitchenObjectSO, this); 
+        }
     }
 }
