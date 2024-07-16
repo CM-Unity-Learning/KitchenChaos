@@ -22,8 +22,10 @@ public class StoveCounter : BaseContainer, IHasProgress
     [SerializeField] private BurningRecipeSO[] burningRecipeSOArray;
 
     private State state;
+
     private float fryingTimer;
     private float burningTimer;
+
     private FryingRecipeSO fryingRecipeSO;
     private BurningRecipeSO burningRecipeSO;
 
